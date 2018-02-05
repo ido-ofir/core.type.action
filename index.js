@@ -4,10 +4,9 @@ var utils = require('./utils.js');
 module.exports = {
   name: 'core.type.action',
   dependencies: [
-    'core.plugin.get-definition-object',
-    'core.plugin.build',
-    'core.import.q',
-    'core.plugin.monitor',
+    'core.plugin.type',
+    'core.loader.types',
+    'core.import.q'
   ],
   /**
    * @name core.types.action

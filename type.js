@@ -1,26 +1,29 @@
 module.exports = {
   name: 'action',
   recursive: true,
-  schema: {
-    name: {
+  schema: [
+    {
+      key: 'name',
       type: 'string',
       isRequired: true,
       value: ''
     },
-    schema: {
+    {
+      key: 'schema',
       type: 'schema'
     },
-    dependencies: {
+    {
+      key: 'dependencies',
       type: 'array',
       ofType: 'string',
       options: 'moduleNames'
     },
-    get: {
+    {
+      key: 'get',
       type: 'function',
-      source: '() => {  }',
-      compiled: 'function(){  }'
+      code: 'function(){  }'
     }
-  },
+  ],
   build(definition) {
     var {
       name,
