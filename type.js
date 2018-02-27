@@ -1,6 +1,5 @@
 module.exports = {
   name: 'action',
-  recursive: true,
   schema: [
     {
       key: 'name',

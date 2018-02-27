@@ -31,7 +31,9 @@ module.exports = {
      * @param definition.get - called when all dependencies are available, should return the action function. 
      */
     Action(name, dependencies, get) {
-
+      if(Array.isArray(name)){
+        return name.map(this.Action)
+      }
       var definition = this.getDefinitionObject(name, dependencies, get, 'action');
       return this.build(definition);
     },

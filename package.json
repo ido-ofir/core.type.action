@@ -1,6 +1,6 @@
 {
     "name": "core.type.action",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "a business level action",
     "main": "index.js",
     "scripts": {
