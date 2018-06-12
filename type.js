@@ -1,5 +1,6 @@
 module.exports = {
   name: 'action',
+  identifier: 'name',
   schema: [
     {
       key: 'name',
@@ -20,7 +21,7 @@ module.exports = {
     {
       key: 'get',
       type: 'function',
-      code: 'function(){  }'
+      params: { code: 'function(){  }' }
     }
   ],
   build(definition) {

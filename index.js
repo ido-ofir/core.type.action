@@ -35,7 +35,15 @@ module.exports = {
         return name.map(this.Action)
       }
       var definition = this.getDefinitionObject(name, dependencies, get, 'action');
-      return this.build(definition);
+
+      var source = this.type.toSource({
+        id: definition.name,
+        key: definition.name,
+        type: 'action',
+        description: definition.description || '',
+      }, definition);
+
+      return this.build(source, definition.done);
     },
     /**
      * @name core.run
