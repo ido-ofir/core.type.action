@@ -34,7 +34,7 @@ module.exports = {
       if(Array.isArray(name)){
         return name.map(this.Action)
       }
-      var definition = this.getDefinitionObject(name, dependencies, get, 'action');
+      var definition = this.type.getDefinitionObject(name, dependencies, get, 'action');
 
       var source = this.type.toSource({
         id: definition.name,
