@@ -59,7 +59,7 @@ module.exports = {
       if (!action) throw new Error(`cannot find action '${name}'`);
       if (!data) data = {};
       var defered = promise || this.imports.q.defer();
-      utils.validateSchema(action.schema, this.nativeTypes, data, action.name);
+      // utils.validateSchema(action.schema, this.nativeTypes, data, action.name);
       this.monitor('actions.run', { name: name, data: data });
       action.run.call(context || this, data, defered);
       return defered.promise;
