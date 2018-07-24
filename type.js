@@ -48,11 +48,11 @@ module.exports = {
     if (get) {
       try {
         if (!dependencies || !dependencies.length) {
-          done(get.call(this));
+          done(get.call(core));
         } else {
           core.require(dependencies, function(modules) {
             modules = [].slice.call(arguments);
-            done(get.apply(this, modules));
+            done(get.apply(core, modules));
           })
         }
       } catch (e) {
