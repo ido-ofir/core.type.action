@@ -19,10 +19,14 @@ core.Action({
             type: 'string'
         }
     ],
-    run({ email }, promise){
-        
-        core.set('email', email);
-        promise.resolve(email);
+    get(){
+    
+        // return a function to run
+        return ({ email }, promise) => {
+
+            core.set('email', email);
+            promise.resolve(email);
+        }
     }
 });
 
